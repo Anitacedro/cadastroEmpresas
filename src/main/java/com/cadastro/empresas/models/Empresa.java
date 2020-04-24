@@ -1,5 +1,7 @@
 package com.cadastro.empresas.models;
 
+import com.cadastro.empresas.dto.EmpresaDto;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Objects;
@@ -24,6 +26,37 @@ public class Empresa implements Serializable {
     private String complemento;
 
     public Empresa() {
+    }
+
+    public Empresa(EmpresaDto dto) {
+        this.id = dto.getId();
+        this.cnpj = dto.getCnpj();
+        this.nome = dto.getNome();
+        this.razaoSocial = dto.getRazaoSocial();
+        this.contato = dto.getContato();
+        this.email = dto.getEmail();
+        this.logradouro = dto.getLogradouro();
+        this.cep = dto.getCep();
+        this.cidade = dto.getCidade();
+        this.estado = dto.getEstado();
+        this.bairro = dto.getBairro();
+        this.complemento = dto.getComplemento();
+    }
+
+
+    public Empresa(Long id, String cnpj, String nome, String razaoSocial, String contato, String email, String logradouro, String cep, String cidade, String estado, String bairro, String complemento) {
+        this.id = id;
+        this.cnpj = cnpj;
+        this.nome = nome;
+        this.razaoSocial = razaoSocial;
+        this.contato = contato;
+        this.email = email;
+        this.logradouro = logradouro;
+        this.cep = cep;
+        this.cidade = cidade;
+        this.estado = estado;
+        this.bairro = bairro;
+        this.complemento = complemento;
     }
 
     public Long getId() {
