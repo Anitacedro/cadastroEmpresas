@@ -24,25 +24,25 @@ public class EmpresaResource {
 
     @ApiOperation(value = "Retorna uma empresa unica")
     @GetMapping("/empresa/{id}")
-    public Empresa listaProdutoUnico(@PathVariable(value = "id") long id) {
+    public Empresa listaEmpresaUnico(@PathVariable(value = "id") long id) {
         return empresaRepository.findById(id);
     }
 
     @ApiOperation(value = "Salva uma empresa")
     @PostMapping("/empresa")
-    public Empresa salvaProduto(@RequestBody @Valid Empresa empresa) {
+    public Empresa salvaEmpresa(@RequestBody @Valid Empresa empresa) {
         return empresaRepository.save(empresa);
     }
 
     @ApiOperation(value = "Deleta uma empresa")
     @DeleteMapping("/empresa")
-    public void deletaProduto(@RequestBody @Valid Empresa empresa) {
+    public void deletaEmpresa(@RequestBody @Valid Empresa empresa) {
         empresaRepository.delete(empresa);
     }
 
     @ApiOperation(value = "Atualiza uma empresa")
     @PutMapping("/empresa")
-    public Empresa atualizaProduto(@RequestBody @Valid Empresa empresa) {
+    public Empresa atualizaEmpresa(@RequestBody @Valid Empresa empresa) {
         return empresaRepository.save(empresa);
     }
 }
