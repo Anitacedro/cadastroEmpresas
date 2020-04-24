@@ -1,8 +1,6 @@
 package com.cadastro.empresas.models;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Objects;
 
@@ -11,6 +9,7 @@ import java.util.Objects;
 public class Empresa implements Serializable {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String cnpj;
     private String nome;
