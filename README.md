@@ -1,6 +1,6 @@
 # cadastroEmpresas
 
-Projeto de cadastro de empresas usando Postgres e angular 7/8
+Projeto de cadastro de empresas usando Postgres
 Para a execução correta da aplicação é necessário que seja instalado o postgres "https://www.postgresql.org/download/" e 
 nele seja criado o database "cadastro" pelo pgAdmin ou pelo shell.
 
